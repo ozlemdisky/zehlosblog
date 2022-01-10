@@ -13,7 +13,7 @@ function HomePage() {
        </div>
   
       </div>
-      <div className="max-w-4xl mx-auto mt-20"><img src="/heyhey.gif" alt=""/> </div>
+      <div className="site-xl-container mt-20"><img src="/heyhey.gif" alt=""/> </div>
       </div>
      
     )

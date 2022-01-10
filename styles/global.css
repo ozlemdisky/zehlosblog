@@ -11,7 +11,11 @@
 
 @layer components {
     .site-container{
-        @apply max-w-2xl mx-auto
+        @apply max-w-2xl  mx-auto px-8
       
     }
+    .site-4xl-container{
+        @apply max-w-4xl mx-auto px-6
+    }
 }
+
