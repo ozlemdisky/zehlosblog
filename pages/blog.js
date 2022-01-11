@@ -14,7 +14,7 @@ function BlogPage({ posts }) {
             </Link>
           </h2>
           <p>{post.frontMatter.excerpt}</p>
-          <div className=" text-slate-600">
+          <div className=" text-slate-500">
             <span>{post.frontMatter.date}</span>
             
           </div>
