@@ -5,7 +5,7 @@ export default function PostPage(post) {
     console.log(post)
     return (
     <div className="site-container">
-        <div>deneme</div>
+        <div>{post.content}</div>
     </div>
     )
 }

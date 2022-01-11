@@ -1,4 +1,4 @@
-const { default: Link } = require("next/link");
+import Link from "next/link";
 
 export default function Header() {
     return <header className="site-container py-8 ">
