@@ -1,11 +1,13 @@
 {
     "post": {
-      "contentPath": "content/posts",
+      "contentPath": "content",
       "basePath": "/blog",
       "sortBy": "date",
       "sortOrder": "desc"
     },
+
     "category": {
-      "contentPath": "content/categories"
-    }
-  }
+        "contentPath": "content/categories"
+      }
+    } 
+  
