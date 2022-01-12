@@ -1,5 +1,6 @@
-import { getAllNodes } from "next-mdx/server";
 import Link from "next/Link";
+import { getAllNodes } from "next-mdx/server";
+
 
 
 function BlogPage({ posts }) {
@@ -34,4 +35,4 @@ export async function getStaticProps() {
   }
 }
  
-export default BlogPage;
+export default BlogPage
