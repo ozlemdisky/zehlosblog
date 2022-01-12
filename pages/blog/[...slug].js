@@ -1,11 +1,25 @@
-import { getMdxNode, getMdxPaths } from "next-mdx/server"
-export default function PostPage(post) {
+import { getMdxNode, getMdxPaths } from 'next-mdx/server'
+import { useHydrate } from 'next-mdx/client'
+import { mdxComponents } from '../../components/mdx-components'
 
 
-    console.log(post)
-    return (
-    <div className="site-container">
-        <div>{post.content}</div>
+export default function PostPage({post}) {
+ console.log(post)
+
+ const content = useHydrate(post, {
+   components:mdxComponents  
+ })
+ 
+ return (
+   <div className="site-container">
+     <article> 
+       <h1 className='text-4xl font-bold'>{post.frontmatter.title}</h1>
+       <p>{post.frontmatter.excerpt}</p>
+       <hr className='my-4' />
+     <div>{content}</div>
+     
+     </article>
+     
     </div>
     )
 }
