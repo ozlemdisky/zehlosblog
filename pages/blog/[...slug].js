@@ -4,8 +4,6 @@ import { mdxComponents } from '../../components/mdx-components'
 
 
 export default function PostPage({post}) {
- console.log(post)
-
  const content = useHydrate(post, {
    components:mdxComponents  
  })
@@ -13,13 +11,13 @@ export default function PostPage({post}) {
  return (
    <div className="site-container">
      <article> 
-       <h1 className='text-4xl font-bold'>{post.frontmatter.title}</h1>
-       <p>{post.frontmatter.excerpt}</p>
-       <hr className='my-4' />
-     <div>{content}</div>
-     
+       <h1 className='text-4xl font-bold'>{post.frontMatter.title}</h1>
+       <p>{post.frontMatter.excerpt}</p>
+       <hr className='my-4'/>
+
+       <div className='prose'>{content}</div>
      </article>
-     
+    
     </div>
     )
 }
