@@ -1,4 +1,4 @@
-import Link from "next/Link";
+import Link from "next/link";
 import { getAllNodes } from "next-mdx/server";
 
 
@@ -17,7 +17,7 @@ function BlogPage({ posts }) {
            <p>{post.frontMatter.excerpt}</p>
            <div className=" text-slate-400">
             <span>{post.frontMatter.date}</span>
-          </div>
+         </div>
         </article>
         )
       })}

@@ -12,12 +12,16 @@ export default function PostPage({post}) {
    <div className="site-container">
      <article> 
        <h1 className='text-4xl font-bold'>{post.frontMatter.title}</h1>
+       <div >
+       <img src="/heyhey.gif" className="aspect-w- aspect-h-9 allowfullscreen"></img>
+       </div>
+      
        <p>{post.frontMatter.excerpt}</p>
        <hr className='my-4'/>
 
        <div className='prose'>{content}</div>
      </article>
-    
+     
     </div>
     )
 }
