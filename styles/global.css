@@ -12,6 +12,7 @@
 @layer components {
 .site-container{
     @apply max-w-2xl  mx-auto px-8
+    font-thin
     
 }
 .site-4xl-container{

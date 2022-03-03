@@ -1,9 +1,12 @@
 import { getMdxNode, getMdxPaths } from 'next-mdx/server'
 import { useHydrate } from 'next-mdx/client'
 import { mdxComponents } from '../../components/mdx-components'
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 export default function PostPage({post}) {
+  const { loginWithRedirect, logout,isAuthenticated,user } = useAuth0();
+
  const content = useHydrate(post, {
    components:mdxComponents  
  })
@@ -22,6 +25,16 @@ export default function PostPage({post}) {
        <div className='prose'>{content}</div>
      </article>
      
+     <div>
+       <textarea rows="5" className='border'/>
+
+       {isAuthenticated ? <div>
+        <button onClick={() => logout({returnTo: process.env.NEXT_PUBLİC_URL + '/blog'})}>Logout</button> 
+       </div>: <div> <button onClick={() => loginWithRedirect()}>Login</button> </div>
+        }
+       
+       
+     </div>
     </div>
     )
 }
