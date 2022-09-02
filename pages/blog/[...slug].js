@@ -29,7 +29,7 @@ export default function PostPage({post}) {
        <textarea rows="5" className='border'/>
 
        {isAuthenticated ? <div>
-        <button onClick={() => logout({returnTo: process.env.NEXT_PUBLİC_URL + '/blog'})}>Logout</button> 
+        <button onClick={() => logout({returnTo: process.env.NEXT_PUBLIC_URL + '/blog'})}>Logout</button> 
        </div>: <div> <button onClick={() => loginWithRedirect()}>Login</button> </div>
         }
        
